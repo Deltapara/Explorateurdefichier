@@ -3,10 +3,8 @@ package com.esiea.pootd2.interfaces;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.URI;
-import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -38,6 +36,7 @@ public class HttpInterface extends AbstractInterface implements HttpHandler {
         }
     }
 
+    @Override
     public void run() {
         assert server != null;
         server.start();
